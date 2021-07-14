@@ -12,5 +12,5 @@
 * 그렇지 않으면, hashcode() 값을 사용하는 Collection인 `HashSet, HashMap, HashTable`을 사용할 때 문제가 발생할 수 있습니다.
 * HashSet에서는 객체간의 중복여부를 파악할 때 hashcode()를 사용하고, HashMap과 HashTable에서는 key의 중복여부를 파악할 때 hashcode를 사용하기 때문입니다.
 * 즉, hashcode()로 인한 문제를 일으키지 않기 위해서는 `재정의 한 equals()의 반환 값이 true 라면, 두 객체의 hashcode()도 마찬가지로 동일한 값을 반환시킬 수 있게 재정의` 해야 합니다.
-* `이와 반대로, equals()의 반환 값이 false 라고 하더라도, 두 객체의 hashcode()가 동일할 필요는 없습니다.` 
+* `이와 반대로, equals()의 반환 값이 false 라고 하더라도, 두 객체의 hashcode() 값이 꼭 달라야 할 필요는 없습니다.`  
 * 다만, equals() 값이 false인 객체들에 대해서는 서로 다른 hashcode() 값을 반환해야 해시테이블의 충돌을 최소화 시킬 수 있고 성능을 높일 수 있습니다.
